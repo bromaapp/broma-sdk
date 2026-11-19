@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "broma-sdk"
+version = "0.1.0"
+description = "Drive the Broma antidetect browser from Python: profiles, proxies, flows, and a CDP endpoint for Playwright or Selenium."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Broma", email = "admin@bromaapp.com" }]
+keywords = ["broma", "antidetect", "browser", "automation", "playwright", "selenium", "cdp", "mcp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://bromaapp.com/docs/api"
+
+[tool.setuptools.packages.find]
+where = ["src"]
