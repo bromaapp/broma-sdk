@@ -4,10 +4,10 @@ Drive the [Broma](https://bromaapp.com) antidetect browser from Python: list and
 
 Needs the Broma app open and signed in on the same computer, on a paid plan, with the local server turned on (**Integrations › API keys**). Make a key there.
 
-Not on PyPI yet: install it from the [GitHub release](https://github.com/supsquad/broma-sdk/releases).
+Not on PyPI yet: install it from the [GitHub release](https://github.com/bromaapp/broma-sdk/releases).
 
 ```sh
-pip install https://github.com/supsquad/broma-sdk/releases/download/v0.1.0/broma_sdk-0.1.0-py3-none-any.whl playwright
+pip install https://github.com/bromaapp/broma-sdk/releases/download/v0.1.0/broma_sdk-0.1.0-py3-none-any.whl playwright
 ```
 
 ```python
