@@ -1,6 +1,6 @@
 """Broma SDK for Python: drive the Broma desktop app from a script.
 
-The app runs a local API on 127.0.0.1 (Broma > API & MCP). Every call goes to one
+The app runs a local API on 127.0.0.1 (Broma > Integrations > API keys). Every call goes to one
 of its tools - the same tools the Broma Agent and MCP clients use - and the app
 applies the key's access (read only / ask in the app / full).
 
@@ -199,7 +199,7 @@ class Broma:
                  base_url: Optional[str] = None, timeout: Optional[float] = None):
         self.api_key = api_key or os.environ.get("BROMA_API_KEY", "")
         if not self.api_key:
-            raise BromaError("No API key: pass api_key= or set BROMA_API_KEY. Make one in Broma > API & MCP.",
+            raise BromaError("No API key: pass api_key= or set BROMA_API_KEY. Make one in Broma > Integrations > API keys.",
                              code="key_required")
         if port is None:
             port = int(os.environ.get("BROMA_API_PORT") or DEFAULT_PORT)
@@ -251,5 +251,5 @@ class Broma:
             raise BromaError(body.get("text") or f"HTTP {e.code}", status=e.code, code=body.get("status", "error"),
                              text=body.get("text", ""), result=body) from None
         except urllib.error.URLError as e:
-            raise BromaError(f"Can't reach Broma at {self.base_url}: is the app open, signed in, with API & MCP "
-                             f"turned on? ({e.reason})", code="unreachable") from None
+            raise BromaError(f"Can't reach Broma at {self.base_url}: is the app open, signed in, with the local server "
+                             f"turned on (Integrations > API keys)? ({e.reason})", code="unreachable") from None

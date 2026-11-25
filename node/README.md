@@ -2,7 +2,7 @@
 
 Drive the [Broma](https://bromaapp.com) antidetect browser from Node.js: list and manage profiles, proxies and flows, run flows, and get a profile's Chrome DevTools endpoint for Puppeteer or Playwright.
 
-Needs the Broma app open and signed in on the same computer, on a paid plan, with **API & MCP** turned on. Make a key there.
+Needs the Broma app open and signed in on the same computer, on a paid plan, with the local server turned on (**Integrations › API keys**). Make a key there.
 
 Not on npm yet: install it from the [GitHub release](https://github.com/supsquad/broma-sdk/releases).
 

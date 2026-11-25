@@ -1,6 +1,6 @@
 # Broma SDK
 
-Clients for the local API of the [Broma](https://bromaapp.com) desktop app (paid plans; Broma › API & MCP):
+Clients for the local API of the [Broma](https://bromaapp.com) desktop app (paid plans; Broma › Integrations › API keys):
 
 - [`node/`](node) — `npm install https://github.com/supsquad/broma-sdk/releases/download/v0.1.0/broma-sdk-0.1.0.tgz`
 - [`python/`](python) — `pip install https://github.com/supsquad/broma-sdk/releases/download/v0.1.0/broma_sdk-0.1.0-py3-none-any.whl`

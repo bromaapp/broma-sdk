@@ -1,6 +1,6 @@
 // Broma SDK for Node.js: drive the Broma desktop app from a script.
 //
-// The app runs a local API on 127.0.0.1 (Broma › API & MCP). Every call goes to
+// The app runs a local API on 127.0.0.1 (Broma › Integrations › API keys). Every call goes to
 // one of its tools - the same tools the Broma Agent and MCP clients use - and
 // the app applies the key's access (read only / ask in the app / full).
 //
@@ -47,7 +47,7 @@ export class Broma {
     const env = typeof process !== "undefined" ? process.env : {};
     this.apiKey = options.apiKey ?? env.BROMA_API_KEY ?? "";
     if (!this.apiKey) {
-      throw new BromaError("No API key: pass { apiKey } or set BROMA_API_KEY. Make one in Broma › API & MCP.", { code: "key_required" });
+      throw new BromaError("No API key: pass { apiKey } or set BROMA_API_KEY. Make one in Broma › Integrations › API keys.", { code: "key_required" });
     }
     const port = options.port ?? (env.BROMA_API_PORT ? Number(env.BROMA_API_PORT) : DEFAULT_PORT);
     this.baseUrl = (options.baseUrl ?? `http://127.0.0.1:${port}`).replace(/\/+$/, "");
@@ -160,7 +160,7 @@ export class Broma {
       });
     } catch (e) {
       throw new BromaError(
-        `Can't reach Broma at ${this.baseUrl}: is the app open, signed in, with API & MCP turned on? (${e.message})`,
+        `Can't reach Broma at ${this.baseUrl}: is the app open, signed in, with the local server turned on (Integrations › API keys)? (${e.message})`,
         { code: "unreachable" },
       );
     } finally {
