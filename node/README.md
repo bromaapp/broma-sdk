@@ -4,10 +4,10 @@ Drive the [Broma](https://bromaapp.com) antidetect browser from Node.js: list an
 
 Needs the Broma app open and signed in on the same computer, on a paid plan, with the local server turned on (**Integrations › API keys**). Make a key there.
 
-Not on npm yet: install it from the [GitHub release](https://github.com/supsquad/broma-sdk/releases).
+Not on npm yet: install it from the [GitHub release](https://github.com/bromaapp/broma-sdk/releases).
 
 ```sh
-npm install https://github.com/supsquad/broma-sdk/releases/download/v0.1.0/broma-sdk-0.1.0.tgz puppeteer-core
+npm install https://github.com/bromaapp/broma-sdk/releases/download/v0.1.0/broma-sdk-0.1.0.tgz puppeteer-core
 ```
 
 ```js
